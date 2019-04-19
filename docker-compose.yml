@@ -1,0 +1,11 @@
+version: '3'
+services:
+  sms_tools:
+    build:
+      context: .
+    environment:
+      - DISPLAY=${DISPLAY}
+    volumes:
+      - .:/sms-tools
+      - /sms-tools/software/models/utilFunctions_C
+      - /tmp/.X11-unix:/tmp/.X11-unix:ro
